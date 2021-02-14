@@ -88,7 +88,7 @@ namespace api.Services
                 var to = GetNextDay(from);
                 var result = await _bookingDbContext.Bookings.AnyAsync(b =>
                     b.ActivityId == model.ActivityId && b.UserId == user.Id && b.Start >= from && b.Start < to);
-                if (result) return new ApiResponse(400, "A booking already exist for user that day");
+                if (result) return new ApiResponse(400, "Cannot make more than one booking per day and activity");
             }
 
             // Check if there is already a booking at that time
