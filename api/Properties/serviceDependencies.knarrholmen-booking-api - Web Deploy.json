@@ -1,0 +1,10 @@
+{
+  "dependencies": {
+    "mssql1": {
+      "resourceId": "/subscriptions/[parameters('subscriptionId')]/resourceGroups/[parameters('resourceGroupName')]/providers/Microsoft.Sql/servers/knarrholmenbooking/databases/KnarrholmenBooking",
+      "type": "mssql.azure",
+      "connectionId": "KnarrholmenBooking",
+      "secretStore": "AzureAppSettings"
+    }
+  }
+}
